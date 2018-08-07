@@ -1,17 +1,15 @@
 import * as React from "react";
+import Counter from 'components/Counter';
+import './App.scss';
+const logo = require('../assets/logo.svg');
 
-// const reactLogo = require("./../assets/img/react_logo.svg");
-
-export interface AppProps {
-}
-
-export default class App extends React.Component<AppProps, undefined> {
+export default class App extends React.Component {
     render() {
         return (
             <div className="app">
-                <h1>whatthe
-                 World!?? peace</h1>
+                <Counter />
                 <p>Foo to the barz</p>
+                <img src={logo} height="480"/>
             </div>
         );
     }

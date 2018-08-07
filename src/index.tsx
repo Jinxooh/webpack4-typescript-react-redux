@@ -1,3 +1,6 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
 import * as React from "react";
 import {render} from "react-dom";
 import {AppContainer} from "react-hot-loader";
