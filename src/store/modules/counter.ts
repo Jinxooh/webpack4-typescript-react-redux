@@ -13,7 +13,7 @@ export interface CounterState {
 }
 
 const initialState: CounterState = {
-  value: 0,
+  value: 4,
 };
 
 export default handleActions<CounterState>(
