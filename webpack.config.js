@@ -1,8 +1,9 @@
 const path = require('path');
+const webpack = require('webpack');
 const TSLintPlugin = require('tslint-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.ts',
+  entry: './src/index.tsx',
   module: {
     rules: [
       {
@@ -21,6 +22,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),
     new TSLintPlugin({
         files: ['./src/**/*.ts']
     })
