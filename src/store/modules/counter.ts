@@ -13,7 +13,7 @@ export interface CounterState {
 }
 
 const initialState: CounterState = {
-  value: 1
+  value: 0,
 };
 
 export default handleActions<CounterState>(
@@ -21,5 +21,5 @@ export default handleActions<CounterState>(
     [INCREMENT]: (state) => ({ value: state.value + 1 }),
     [DECREMENT]: (state) => ({ value: state.value - 1 }),
   },
-  initialState
+  initialState,
 );
