@@ -39,6 +39,7 @@ module.exports = {
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
+    alias: {},
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -55,6 +56,8 @@ module.exports = {
   devServer: {
     hot: true, // enable HMR on the server
     contentBase: "./dist",
+    publicPath: '/',
+    historyApiFallback: true,
   },
   devtool: 'cheap-module-eval-source-map',
   node: {
