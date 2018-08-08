@@ -10,7 +10,7 @@ const rootEl = document.getElementById("root");
 render(
   <AppContainer>
     <Provider store={store}>
-      <App />
+        <App />
     </Provider>
   </AppContainer>,
   rootEl,

@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { CounterActions } from '../actions/actionCreators';
 import Counter from '../components/Counter';
 import { StoreState } from '../reducers';
-
 interface Props {
   value: number;
 }
