@@ -1,7 +1,7 @@
 import * as React from "react";
-import modules from '../store/modules';
+import CounterContainer from '../containers/CounterContainer';
+import reducers from '../reducers';
 import './App.scss';
-import Counter from './Counter';
 
 const logo = require('../assets/logo.svg');
 
@@ -9,7 +9,7 @@ class App extends React.Component {
     render() {
         return (
             <div className="app">
-                <Counter />
+                <CounterContainer />
                 <p>F33gbez</p>
                 <img src={logo} height="480"/>
             </div>
@@ -17,6 +17,6 @@ class App extends React.Component {
     }
 }
 
-export const reducer = modules;
+export const reducer = reducers;
 
 export default App;

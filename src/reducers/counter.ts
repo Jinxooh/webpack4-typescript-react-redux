@@ -1,3 +1,4 @@
+import produce from 'immer';
 import { createAction, handleActions } from 'redux-actions';
 
 const INCREMENT = 'counter/INCREMENT';
@@ -13,13 +14,17 @@ export interface CounterState {
 }
 
 const initialState: CounterState = {
-  value: 4,
+  value: 0,
 };
 
 export default handleActions<CounterState>(
   {
-    [INCREMENT]: (state) => ({ value: state.value + 1 }),
-    [DECREMENT]: (state) => ({ value: state.value - 1 }),
+    [INCREMENT]: (state) => produce(state, (draft) => {
+      draft.value = state.value + 1;
+    }),
+    [DECREMENT]: (state) => produce(state, (draft) => {
+      draft.value = state.value - 1;
+    }),
   },
   initialState,
 );

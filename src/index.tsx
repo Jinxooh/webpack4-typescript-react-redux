@@ -3,10 +3,9 @@ import { render } from "react-dom";
 import { AppContainer } from "react-hot-loader";
 import { Provider } from 'react-redux';
 import App, { reducer } from "./components/App";
-import configureStore from './store/configureStore';
+import store from './store/configureStore';
 
 const rootEl = document.getElementById("root");
-const store = configureStore();
 
 render(
   <AppContainer>
@@ -36,6 +35,6 @@ if (module.hot) {
     );
   };
 
-  module.hot.accept(['./components/App', './store/modules'], () => { reload(); });
+  module.hot.accept(['./components/App', './reducers'], () => { reload(); });
   // module.hot.accept("./store/modules", () => {reload(); });
 }

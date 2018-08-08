@@ -1,11 +1,10 @@
 import { createStore } from 'redux';
-import modules from './modules';
+import reducers from '../reducers';
 
-export default function configureStore() {
-  const store = createStore(
-    modules, /* preloadedState, */
-    (window as any).__REDUX_DEVTOOLS_EXTENSION__ && (window as any).__REDUX_DEVTOOLS_EXTENSION__(),
-   );
+const configureStore = () => createStore(
+  reducers, /* preloadedState, */
+  (window as any).__REDUX_DEVTOOLS_EXTENSION__ && (window as any).__REDUX_DEVTOOLS_EXTENSION__(),
+);
 
-  return store;
-}
+const store = configureStore();
+export default store;
