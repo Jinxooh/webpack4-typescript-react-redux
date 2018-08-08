@@ -15,8 +15,14 @@ class CounterContainer extends React.Component<Props> {
   onDecrement = () => {
     CounterActions.decrement();
   }
+  onIncrementAsync = () => {
+    CounterActions.incrementAsync();
+  }
+  onDecrementAsync = () => {
+    CounterActions.decrementAsync();
+  }
   render() {
-    const { onIncrement, onDecrement } = this;
+    const { onIncrement, onDecrement, onIncrementAsync, onDecrementAsync } = this;
     const { value } = this.props;
     return (
       <>
@@ -26,6 +32,8 @@ class CounterContainer extends React.Component<Props> {
         <Counter
           onIncrement={onIncrement}
           onDecrement={onDecrement}
+          onIncrementAsync={onIncrementAsync}
+          onDecrementAsync={onDecrementAsync}
           value={value}
         />
       </>
