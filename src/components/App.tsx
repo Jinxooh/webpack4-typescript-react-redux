@@ -4,10 +4,7 @@ import CounterContainer from '../containers/CounterContainer';
 import HomeContainer from '../containers/HomeContainer';
 import './App.scss';
 
-interface Props {
-}
-
-const App: React.SFC<Props> = () => (
+const App: React.SFC<{}> = () => (
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={HomeContainer} />

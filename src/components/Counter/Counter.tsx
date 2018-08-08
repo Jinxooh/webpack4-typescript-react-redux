@@ -8,7 +8,7 @@ interface Props {
 
 const Counter: React.SFC<Props> = ({ value, onIncrement, onDecrement }) => (
   <div>
-    <h2>카운터</h2>
+    <h2>카운터z123z</h2>
     <h3>{value}</h3>
     <button onClick={onIncrement}>+</button>
     <button onClick={onDecrement}>-</button>

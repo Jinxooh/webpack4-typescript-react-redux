@@ -35,6 +35,6 @@ if (module.hot) {
     );
   };
 
-  module.hot.accept(['./components/App', './reducers'], () => { reload(); });
+  module.hot.accept(['./components/App'], () => { reload(); });
   // module.hot.accept("./store/modules", () => {reload(); });
 }
