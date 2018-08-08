@@ -1,22 +1,19 @@
 import * as React from "react";
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import CounterContainer from '../containers/CounterContainer';
-import reducers from '../reducers';
+import HomeContainer from '../containers/HomeContainer';
 import './App.scss';
 
-const logo = require('../assets/logo.svg');
-
-class App extends React.Component {
-    render() {
-        return (
-            <div className="app">
-                <CounterContainer />
-                <p>F33gbez</p>
-                <img src={logo} height="480"/>
-            </div>
-        );
-    }
+interface Props {
 }
 
-export const reducer = reducers;
+const App: React.SFC<Props> = () => (
+  <BrowserRouter>
+    <Switch>
+      <Route exact path="/" component={HomeContainer} />
+      <Route path="/counter" component= {CounterContainer} />
+    </Switch>
+  </BrowserRouter>
+);
 
 export default App;

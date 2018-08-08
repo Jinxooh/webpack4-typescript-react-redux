@@ -2,7 +2,7 @@ import * as React from "react";
 import { render } from "react-dom";
 import { AppContainer } from "react-hot-loader";
 import { Provider } from 'react-redux';
-import App, { reducer } from "./components/App";
+import App from "./components/App";
 import store from './store/configureStore';
 
 const rootEl = document.getElementById("root");

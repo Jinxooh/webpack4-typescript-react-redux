@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { CounterActions } from '../actions/actionCreators';
 import Counter from '../components/Counter';
 import { StoreState } from '../reducers';
@@ -19,11 +20,16 @@ class CounterContainer extends React.Component<Props> {
     const { onIncrement, onDecrement } = this;
     const { value } = this.props;
     return (
-      <Counter
-        onIncrement={onIncrement}
-        onDecrement={onDecrement}
-        value={value}
-      />
+      <>
+        <div>
+          <Link to="/">Home</Link>
+        </div>
+        <Counter
+          onIncrement={onIncrement}
+          onDecrement={onDecrement}
+          value={value}
+        />
+      </>
     );
   }
 }
