@@ -2,7 +2,7 @@ import * as React from 'react';
 import { FormattedMessage, InjectedIntl, injectIntl } from 'react-intl';
 
 interface Props {
-  intl: InjectedIntl;
+  intl?: InjectedIntl;
   value: number;
   onIncrement(): void;
   onDecrement(): void;
