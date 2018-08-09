@@ -38,7 +38,6 @@
     "start": "webpack-dev-server --config ./webpack.config.js --mode development"
   },
   "dependencies": {
-    "@types/redux-thunk": "^2.1.0",
     "axios": "^0.18.0",
     "dotenv": "^6.0.0",
     "immer": "^1.5.0",
