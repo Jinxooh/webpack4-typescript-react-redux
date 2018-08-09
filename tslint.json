@@ -13,7 +13,8 @@
     "interface-name": false,
     "quotemark": false,
     "strict-null-checks": false,
-    "no-var-keyword": true
+    "no-var-keyword": true,
+    "arrow-parens": false
   },
   "rulesDirectory": []
 }
