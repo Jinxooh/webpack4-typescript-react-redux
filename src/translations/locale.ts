@@ -9,6 +9,6 @@ export default {
   },
   ja: {
     hello: 'こんにちは',
-    goodbye: 'こんにちは こんにちは',
+    goodbye: 'さようなら',
   },
 };

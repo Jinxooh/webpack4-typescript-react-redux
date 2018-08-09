@@ -22,8 +22,6 @@ declare let module: { hot: any };
 if (module.hot) {
   const reload = () => {
     const NewApp = require("./components/App").default;
-    // const nextRootReducer = NewApp.reducer;
-    // store.replaceReducer(nextRootReducer);
 
     render(
       <AppContainer>
@@ -36,5 +34,4 @@ if (module.hot) {
   };
 
   module.hot.accept(['./components/App'], () => { reload(); });
-  // module.hot.accept("./store/modules", () => {reload(); });
 }
